@@ -31,22 +31,31 @@ function handleChange(event) {
  }
   return (
     <main>
-      {quizScreen && <button onClick={goBack}>Go back</button>}
+      {quizScreen && <button className="go-back" onClick={goBack}>Go back</button>}
       <div className="start-screen">
             <h1 className="start-screen--title">Quizzical</h1>
+            <br />
             {quizScreen === false &&<p className="start-screen--description">Select your settings!</p>}
            
            
         </div>
       {quizScreen === false && <form onSubmit={handleSubmit}>
-                <input
-                    type="number"
-                    pattern="[0-100]*"
-                    placeholder="Number of questions"
+                <select 
+                    id="numberOfQuestions"
+                    value={formData.numberOfQuestions}
                     onChange={handleChange}
                     name="numberOfQuestions"
-                    value={formData.numberOfQuestions}
-                    /> 
+                >
+                        <option vlaue="">-- How many questions? --</option>
+                        <option value={5}>5</option>
+                        <option value={10}>10</option>
+                        <option value={20}>20</option>
+                        <option value={50}>50</option>
+                        <option value={100}>100</option>
+
+                </select>
+               
+              
                 <br />
                 
                 

@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
+  margin: 5px;
 }
 body {
   background-color: #F5F7FB;
   max-width: 800px;
   margin: auto;
   padding-top: 20px;
+  font-family: 'Inter';
 
 }
 
@@ -18,7 +20,7 @@ body {
 
 .start-screen--title{  
   color:  #293264;
-  font-family: 'Karla';
+  font-family: 'Inter';
   font-weight: 700;
 }
 
@@ -35,15 +37,21 @@ body {
   border: none;
   font-family: Inter;
 font-weight: 500;
+cursor: pointer;
+}
+
+.start-screen--button:hover{
+opacity: .85;
 }
 
 .question {
-  font-family: Karla;
+  /* font-family: Karla; */
   font-weight: 700;
   display: flex;
   justify-content: space-between;
   color: #293264;
   flex-direction: row;
+  font-family: 'Inter';
   
 
 }
@@ -51,7 +59,7 @@ font-weight: 500;
 .question--container{
   /* display: flex;
   flex-direction: row; */
-  max-width: 600px;
+  /* max-width: 600px; */
   border-bottom: .5px solid #DBDEF0;
   padding-bottom: 30px;
   /* display: flex; */
@@ -111,4 +119,24 @@ select {
 
 fieldset {
   border: none;
+}
+
+.go-back {
+  background-color: #4D5B9E;
+  color: white;
+  border-radius: 15px;
+  /* width: 195px; */
+  padding: 8px 8px 8px 8px;
+  border: none;
+  font-family: Inter;
+font-weight: 500;
+cursor: pointer;
+}
+
+.go-back:hover{
+  opacity:0.85;
+}
+
+.trivia--container{
+  font-family: 'Inter';
 }
