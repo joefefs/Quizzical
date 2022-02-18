@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #F5F7FB;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 20px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start-screen{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-screen--title{  
+  color:  #293264;
+  font-family: 'Karla';
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.start-screen--description{
+  font-family: Inter;
+}
+
+.start-screen--button{
+  background-color: #4D5B9E;
+  color: white;
+  border-radius: 15px;
+  width: 195px;
+  padding: 10px 0 10px 0;
+  border: none;
+  font-family: Inter;
+font-weight: 500;
+}
+
+.question {
+  font-family: Karla;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  color: #293264;
+  flex-direction: row;
+  
+
+}
+
+.question--container{
+  /* display: flex;
+  flex-direction: row; */
+  max-width: 600px;
+  border-bottom: .5px solid #DBDEF0;
+  padding-bottom: 30px;
+  /* display: flex; */
+}
+
+.question--answer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question--answers{
+  border: 0.794239px solid #4D5B9E;
+/* box-sizing: border-box; */
+padding: 5px 5px;
+border-radius: 7.94239px;
+color: #293264;
+font-family: Inter;
+font-weight: 500;
+font-size: 0.8em;
+cursor: pointer;
+
+
+}
+
+.answer-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.correct {
+  background-color: lightgreen;
+}
+
+.incorrect {
+  background-color: lightcoral;
+}
+
+form {
+  font-family: Inter;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  padding: 10px;
+  border-radius: 1000px;
+  border: .5px solid;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select {
+  padding: 10px 15px;
+  
+  border-radius: 1000px;
+}
+
+fieldset {
+  border: none;
 }
