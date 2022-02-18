@@ -5,8 +5,8 @@ export default function Question(props){
     const [questions, setQuestions] = useState([])
 
     useEffect(function() {
-   
-    fetch(`https://opentdb.com/api.php?amount=${props.formData.numberOfQuestions}&category=${props.formData.category}&difficulty=${props.formData.difficulty}&type=multiple`)
+   const fetchTrivia = () => {
+    return fetch(`https://opentdb.com/api.php?amount=${props.formData.numberOfQuestions}&category=${props.formData.category}&difficulty=${props.formData.difficulty}&type=multiple`)
         .then((res) => res.json())
         .then((data) => {
             setQuestions(
@@ -20,7 +20,9 @@ export default function Question(props){
                 }))
             )
         })
-    },[]);
+    }
+    fetchTrivia();
+    },[props]);
 
     const selectAnswer = (question) => (event) =>{
         event.target.id === question.correct_answer 
